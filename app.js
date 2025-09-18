@@ -29,13 +29,52 @@
 
 // button.addEventListener("click", renderTitle)
 
-let icon = document.querySelector("icon")
-function darkmode() {  
+let icon = document.querySelector(".iconClass")
+function darkmode() {
     let body = document.querySelector("body")
-    let = sectionIcon = document.querySelector("teste")
-    let = icon = document.querySelector("icon")
+    let = sectionIcon = document.querySelector("#teste")
+    let = icon = document.querySelector(".iconClass")
     body.classList.toggle("body-darkmode")
     sectionIcon.classList.toggle("section-darkmode")
     icon.classList.toggle("icon-class")
 }
-icon.addEventListener("click",darkmode)
+icon.addEventListener("click", darkmode)
+
+const usuarios = [
+    { email: "joao@email.com", senha: "123456" },
+    { email: "maria@email.com", senha: "senha123" },
+    { email: "admin@email.com", senha: "admin" },
+    { email: "lucas@email.com", senha: "lucas123" },
+    { email: "ana@email.com", senha: "ana456" },
+    { email: "carla@email.com", senha: "carla789" },
+    { email: "pedro@email.com", senha: "pedro000" },
+    { email: "rafael@email.com", senha: "rafa123" },
+    { email: "juliana@email.com", senha: "juliana321" },
+    { email: "gustavo@email.com", senha: "guga999" }
+];
+
+const btnLogin = document.querySelector("button");
+const inputEmail = document.querySelector("input[type='email']");
+const inputSenha = document.querySelector("input[type='password']");
+
+btnLogin.addEventListener("click", () => {
+    const emailDigitado = inputEmail.value;
+    const senhaDigitada = inputSenha.value;
+
+  if (!emailDigitado || !senhaDigitada) {
+    alert(" Preencha todos os campos.");
+    return;
+  }
+
+    const login = usuarios.filter(user =>
+        user.email === emailDigitado && user.senha === senhaDigitada
+    );
+
+    if (login) {
+        window.location.href = "cardapio.html";
+    } else {
+        alert(" Email ou senha inválidos.");
+    }
+}
+
+)
