@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="cardapio.css">
-  <title>Cardápio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./cardapio.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Cardápio de Cria</title>
 </head>
 <body>
-  <h1>Pede ifood pede</h1>
-  <h2>Eu vou pedir</h2>
+  <section id="header">
+    <img src="./logo.png" alt="logo">
+  </section>
+  <section>
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Ingredientes</th>
+      <th scope="col">Tamanho</th>
+    </tr>
+  </thead>
+  <tbody>
 
-  <div class="produto">
-    <h2>Hambúrgão de cria</h2>
-    <p>Pão, carne, queijo, alface, tomate e molho.</p>
-    <p class="preco">R$ 18,90</p>
-    <button onclick="pedir('Hambúrgão de cria')">Pedir</button>
-  </div>
+  </tbody>
+</table>
+  </section>
 
-  <div class="produto">
-    <h2>Batata Frita Cocrante</h2>
-    <p>Porção crocante de batatas fritas.</p>
-    <p class="preco">R$ 9,50</p>
-    <button onclick="pedir('Batata Frita Cocrante')">Pedir</button>
-  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-  <div class="produto">
-    <h2>Refrigerante</h2>
-    <p>Coca-Cola, Guaraná ou Pepsi - 350ml.</p>
-    <p class="preco">R$ 5,00</p>
-    <button onclick="pedir('Refrigerante')">Pedir</button>
-  </div>
-
-  <div class="produto">
-    <h2>Milkshake de Morango</h2>
-    <p>Milkshake cremoso com morangos.(É muito cremoso)</p>
-    <p class="preco">R$ 14,00</p>
-    <button onclick="pedir('Milkshake de Morango')">Pedir</button>
-  </div>
+  <script src="./cardapio.js"></script>
 </body>
 </html>
